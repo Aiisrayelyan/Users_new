@@ -29,9 +29,9 @@ function App() {
     };
 
     const handleSalaryUp = user => {
-        const updatedUser = { ...user, salary: user.salary + 50000 };
-        axios.put(`http://localhost:3004/users/${user.id}`, updatedUser).then(() => {
-            setUsers(users.map(u => u.id === user.id ? updatedUser : u));
+        const updatedSalary = user.salary + 50000;
+        axios.patch(`http://localhost:3004/users/${user.id}`, { salary: updatedSalary }).then(() => {
+            setUsers(users.map(u => u.id === user.id ? { ...u, salary: updatedSalary } : u));
             toast.success("User salary has been updated successfully");
         }).catch(err => {
             console.error(err);

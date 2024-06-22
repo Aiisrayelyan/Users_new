@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "09b6",
+      "name": "Shahane",
+      "surname": "Abrahamyan",
+      "salary": 250000
+    },
+    {
+      "id": "3764",
+      "name": "Aram",
+      "surname": "Tumanyan",
+      "salary": 150000
+    }
+  ]
+}
